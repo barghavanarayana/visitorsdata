@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVPCET Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Courses at SVPCET</h1>
+        <div class="courses">
+            {% for course in courses %}
+            <div class="course">
+                <h2>{{ course.name }}</h2>
+                <p>Placement: {{ course.placement }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <h3>Thanks for Visiting!</h3>
+    </div>
+</body>
+</html>
